@@ -221,11 +221,11 @@ try {
     $tag = 'R49_9_7_RELEASE_' + $AudioMode.ToUpperInvariant()
     if ($AudioMode -eq 'Enhanced') { $tag += '_' + $EnhancedPreset.ToUpperInvariant() }
     $outRoot = Join-Path $root 'out'
-    $dest = Join-Path $outRoot 'Zombies Ate My Neighbors!'
+    $dest = Join-Path $outRoot 'Undead Neighbor Eaters'
     Remove-BuildOutput $dest
     New-Item $dest -ItemType Directory -Force | Out-Null
     Copy-Item $xbe.FullName (Join-Path $dest 'default.xbe') -Force
-    Copy-Item $rom.FullName (Join-Path $dest 'Zombies Ate My Neighbors.sfc') -Force
+    Copy-Item $rom.FullName (Join-Path $dest 'zamn.sfc') -Force
     if ($manualComplete) {
         $manualOut=Join-Path $dest 'manual'
         New-Item $manualOut -ItemType Directory -Force | Out-Null
@@ -254,7 +254,7 @@ try {
     }
 
     if (Test-Path $xdvdfs) {
-        $iso = Join-Path $outRoot ("zamn_" + $tag + ".iso")
+        $iso = Join-Path $outRoot ("undead_neighbor_eaters_" + $tag + ".iso")
         & $xdvdfs pack $dest $iso
         if ($LASTEXITCODE -ne 0) { Write-Warning 'XISO packing failed' }
         elseif (Test-Path $iso) { Write-Host "ISO: $iso" -ForegroundColor Green }

@@ -1,6 +1,8 @@
-# Zombies Ate My Neighbors Original Xbox Native Port
+# Undead Neighbor Eaters — Original Xbox Native Port
 
-Unofficial native port of **Zombies Ate My Neighbors** for the Original Xbox.
+**Undead Neighbor Eaters** is an unofficial Original Xbox native port of **Zombies Ate My Neighbors**. This project is not affiliated with the original rights holders.
+
+**Distribution status:** The ROM-free XBE packaging process exists, but the project does not claim redistribution clearance for all upstream-derived code. ROM selection and renaming do not replace the necessary permissions. See [LICENSING.md](LICENSING.md) and [RELEASE_READINESS.md](RELEASE_READINESS.md).
 
 ## Features
 
@@ -30,6 +32,16 @@ Unofficial native port of **Zombies Ate My Neighbors** for the Original Xbox.
 
 
 
+## Clean build and release workflow
+
+The tested fresh-build process is documented in [FRESH_MANUAL_RELEASE_GUIDE.md](FRESH_MANUAL_RELEASE_GUIDE.md). `BUILD_FRESH_XBE_RELEASE.ps1` performs a new RXDK build and checks for the compiled `GAME MANUAL` menu label. `MAKE_ROM_FREE_XBE_RELEASE.ps1` requires a specified XBE via `-XbePath` or a rebuild with `-Build` to avoid repackaging a stale executable.
+
+## Downloading a precompiled XBE
+
+Subject to the rights described in the licensing documents, maintainers can publish a ROM-free XBE ZIP so players **do not need Windows or RXDK**. Run `MAKE_ROM_FREE_XBE_RELEASE.ps1` on the developer's PC; the release ZIP includes only `default.xbe`, a ROM placement guide, license notices and hashes. See [XBE_RELEASE_GUIDE.md](XBE_RELEASE_GUIDE.md). Players provide their own compatible game ROM renamed **`zamn.sfc`**, in the same folder as `default.xbe`.
+
+The XBE dashboard title is renamed in the **packaged copy**; netplay IDs, save IDs, core runtime code, and server details are unchanged. The original SNES game's title artwork loaded from the player's ROM remains original.
+
 ## Build requirements
 
 - Windows
@@ -50,7 +62,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\BUILD_XBOX_RELEASE.ps1
 Default output:
 
 ```text
-out\Zombies Ate My Neighbors!\
+out\Undead Neighbor Eaters\
 ```
 
 If RXDK's `xdvdfs.exe` is installed, the build script also creates an XISO.
@@ -58,14 +70,14 @@ If RXDK's `xdvdfs.exe` is installed, the build script also creates an XISO.
 The build produces only the logging-free public Release version. The saved RXDK
 Release configuration also disables runtime logging and diagnostic profiling.
 
-Copy the entire **Zombies Ate My Neighbors!** folder to your console's games
-location, for example `E:\Games\Zombies Ate My Neighbors!`, and launch
+Copy the entire **Undead Neighbor Eaters** folder to your console's games
+location, for example `E:\Games\Undead Neighbor Eaters`, and launch
 `default.xbe`. The folder contains:
 
 ```text
-Zombies Ate My Neighbors!/
+Undead Neighbor Eaters/
   default.xbe
-  Zombies Ate My Neighbors.sfc
+  zamn.sfc
   audio_enhanced.flag
   manual/
     spread00.rgb565
@@ -159,9 +171,9 @@ Each file must be exactly **1,556,480 bytes**. A PDF, JPEG or PNG renamed to
 The build copies a complete valid set to:
 
 ```text
-out/Zombies Ate My Neighbors!/manual/spread00.rgb565
+out/Undead Neighbor Eaters/manual/spread00.rgb565
 ...
-out/Zombies Ate My Neighbors!/manual/spread09.rgb565
+out/Undead Neighbor Eaters/manual/spread09.rgb565
 ```
 
 You may also place the complete set in a `manual/` folder beside the console's
@@ -178,7 +190,7 @@ You may also place the complete set in a `manual/` folder beside the console's
 R79 corrects the direct-page address used by previous-weapon requests and the
 runtime-to-controller player numbering. It includes the native runtime and
 sprite/renderer updates accumulated since the previous published source.
-Use matching builds on both consoles for online co-op.
+Use matching builds on both consoles for online co-op. Renaming an XBE certificate does not change the network build/protocol identity.
 
 ## Online
 
