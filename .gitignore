@@ -33,3 +33,15 @@ manual/*.pdf
 manual/*.epub
 manual/.generated-manual.json
 manual/.manual-convert-*/
+
+# Private keys, credentials and local test artifacts
+*.pem
+*.pfx
+*.p12
+*.keystore
+*.jks
+.env
+.env.*
+!*.env.example
+*.apk
+*.aab
