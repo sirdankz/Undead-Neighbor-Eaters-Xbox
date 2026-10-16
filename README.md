@@ -18,19 +18,6 @@
 - Fast cached title return and responsive asynchronous online menus
 - Modern Controls: LT previous weapon, RT next weapon, Black radar/map
 
-<p align="center">
-  <img src="https://i.imgur.com/cZhHFlY.png" width="700">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/6uUCvYL.png" width="700">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/vDXLcD7.png" width="700">
-</p>
-
-
 
 ## Clean build and release workflow
 
