@@ -9,7 +9,7 @@
 - Native translated game runtime with compatibility fallbacks
 - Original Xbox rendering and audio through RXDK
 - Enhanced / Wide audio by default
-- Direct Connect and Public Rooms online co-op
+- Direct Connect and Public Rooms online co-op + Cross-play W/ Android
 - Online Solo play
 - Server-backed profiles, World Chat and lobby chat
 - Global Solo and Co-op leaderboards with best-time-only records
