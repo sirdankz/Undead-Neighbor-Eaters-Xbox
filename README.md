@@ -1,6 +1,6 @@
 # Undead Neighbor Eaters — Original Xbox Native Port
 
-**Undead Neighbor Eaters** is an unofficial Original Xbox native port of **Zombies Ate My Neighbors**. This project is not affiliated with the original rights holders.
+**Undead Neighbor Eaters** is an unofficial Original Xbox native port of **Zombies Ate My Neighbors SNES USA**. This project is not affiliated with the original rights holders.
 
 **Distribution status:** The ROM-free XBE packaging process exists, but the project does not claim redistribution clearance for all upstream-derived code. ROM selection and renaming do not replace the necessary permissions. See [LICENSING.md](LICENSING.md) and [RELEASE_READINESS.md](RELEASE_READINESS.md).
 
